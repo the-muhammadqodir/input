@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <form id="loginForm" >
+        <div class="login">
+            <h1>Login page</h1>
+            <div class="email">
+                <input type="text" placeholder="@email*" required id="email">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password*" required id="password">
+            </div>
+            <button type="submit">Log in</button>
+        </div>
+    </form>
+
+    <script>
+        const registerForm = document.querySelector(`#loginForm`);
+        const email = document.querySelector(`#email`);
+        const password = document.querySelector(`#password`);
+        const body = document.querySelector('body');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (email.value === localStorage.getItem('emailname') && password.value === localStorage.getItem('password')) {
+                alert("Wellcome")
+                window.location.href = "page.html"
+            } else {
+                alert("Siz login yoki parolni xato kiritdingiz!")
+            }
+        })
+    </script>
+</body>
+</html>

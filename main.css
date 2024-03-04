@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+.register , .login{
+    background-color: aliceblue;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+.username,.email,.password{
+    padding: 20px;
+}
+h1{
+    padding: 20px;
+}
+h2{
+    color: white;
+    padding: 20px;
+}
+h2:hover{
+    color: aqua;
+}
+input{
+    background-color: rgba(0, 0, 0, 0.387);
+    width: 300px;
+    height: 36px;
+    border: none;
+    border-radius: 5px;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.853);
+    padding-left: 10px;
+}
+button{
+    color: white;
+    background-color:rgba(0, 0, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+}
+button:hover{
+    background-color:black;
+    border: 1px solid aqua;
+    color:aqua;
+
+}

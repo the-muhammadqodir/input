@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <h2>IT Time</h2>
+    <form id="registerForm" class="">
+        <div class="register">
+            <h1>Registration Form</h1>
+            <div class="username">
+                <input type="text" placeholder="Name*" required id="username">
+            </div>
+            <div class="email">
+                <input type="text" placeholder="@email*" required id="email">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password*" required id="password">
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        const registerForm = document.querySelector(`#registerForm`);
+        const username = document.querySelector(`#username`);
+        const email = document.querySelector(`#email`);
+        const password = document.querySelector(`#password`);
+        const body = document.querySelector('body');
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (localStorage.getItem('username') === username.value) {
+                alert("bu username oldin royhatdan otgan")
+                username.style.border = "2px solid red"
+
+            } else {
+               
+                let usernameLog = localStorage.setItem('username', username.value)
+                let emailLog = localStorage.setItem('emailname', emailname.value)
+                let passwordLog = localStorage.setItem('password', password.value)
+                username.style.border = "2px solid green"
+                alert("siz muaffaqqiyatli registratsiya qilindingiz")
+                window.location.href = "login.html"
+            }
+        })
+    </script>
+</body>
+</html>
